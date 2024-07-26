@@ -1,9 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import {dark} from '@clerk/themes'
+import { dark } from '@clerk/themes'
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -15,7 +13,7 @@ export default function RootLayout({
       baseTheme: dark
     }}>
       <html lang="en">
-        <body className={inter.className}>{children}</body>
+        <body className="min-h-screen h-screen overflow-hidden flex flex-col">{children}</body>
       </html>
     </ClerkProvider>
   );
